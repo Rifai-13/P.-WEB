@@ -1,0 +1,30 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #333;
+}
+
+h1 {
+    color: aqua;
+    text-align: center;
+}
+table {
+    text-align: center;
+    margin: auto;
+}
+
+table thead {
+    background-color: yellow;
+}
+
+#blue {
+    background-color: aqua;
+}
+
+#black{
+    background-color: black;
+    color: whitesmoke;
+}
+
+#brown{
+    background-color: rgb(206, 132, 132);
+}

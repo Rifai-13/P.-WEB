@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightsteelblue;
+}
+
+.container {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: seagreen;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    padding:50px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 500px;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+.nama, .email, .alamat {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    
+}
+
+label {
+    display: table;
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input, textarea {
+    width: 100%;
+    margin-left: -10px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+button {
+    display: table;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: white;
+    width: 100px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* Media Query untuk layar lebih kecil (tablet dan ponsel) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Perbesar lebar container pada layar yang lebih kecil */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Kurangi ukuran font pada layar yang lebih kecil */
+    }
+
+    .nama, .email, .alamat {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100px; /* Kurangi lebar tombol */
+    }
+}
+
+/* Media Query untuk layar ponsel kecil (kurang dari 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Maksimalkan lebar container pada layar sangat kecil */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Sesuaikan ukuran heading */
+    }
+
+    .nama, .email, .alamat {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 90px; /* Sesuaikan ukuran tombol */
+    }
+}
