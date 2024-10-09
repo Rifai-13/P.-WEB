@@ -22,7 +22,11 @@ arr.forEach(button => {
 
                 // Tampilkan hasil dengan 2 angka di belakang koma
                 if (result !== undefined && typeof result === 'number') {
-                    input.value = result.toFixed(2);
+                    if (Number.isInteger(result)) {
+                        input.value = result;
+                    }else {
+                        input.value = result.toFixed(2);
+                    }
                 } else {
                     input.value = "Error"; // Jika hasil tidak valid, tampilkan "Error"
                 }
