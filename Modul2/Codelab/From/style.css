@@ -5,12 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: lightsteelblue;
+    background: linear-gradient(135deg, #153677, #a8b0f6);
 }
 
 .container {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: seagreen;
+    background-color: transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     padding:50px;
     border-radius: 20px;
@@ -67,12 +67,12 @@ button {
 /* Media Query untuk layar lebih kecil (tablet dan ponsel) */
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Perbesar lebar container pada layar yang lebih kecil */
+        width: 90%; 
         padding: 30px;
     }
 
     h1 {
-        font-size: 2rem; /* Kurangi ukuran font pada layar yang lebih kecil */
+        font-size: 2rem; 
     }
 
     .nama, .email, .alamat {
@@ -80,19 +80,19 @@ button {
     }
 
     button {
-        width: 100px; /* Kurangi lebar tombol */
+        width: 100px; 
     }
 }
 
 /* Media Query untuk layar ponsel kecil (kurang dari 480px) */
 @media (max-width: 480px) {
     .container {
-        width: 100%; /* Maksimalkan lebar container pada layar sangat kecil */
+        width: 100%; 
         padding: 20px;
     }
 
     h1 {
-        font-size: 1.8rem; /* Sesuaikan ukuran heading */
+        font-size: 1.8rem; 
     }
 
     .nama, .email, .alamat {
@@ -100,6 +100,6 @@ button {
     }
 
     button {
-        width: 90px; /* Sesuaikan ukuran tombol */
+        width: 90px; 
     }
 }
