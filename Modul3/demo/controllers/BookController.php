@@ -1,9 +1,8 @@
 <?php
-namespace demo\controllers;
+namespace controllers;
 
-use demo\models\Fiction;
-use demo\models\NonFiction;
-
+use Models\Fiction;
+use Models\NonFiction;
 
 class BookController {
     public function createFictionBook($title, $author) {

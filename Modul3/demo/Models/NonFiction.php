@@ -1,7 +1,7 @@
 <?php
-namespace demo\models;
+namespace Models;
 
-use demo\traits\Describable;
+use Traits\Describable;
 
 class NonFiction extends Book {
     use Describable;

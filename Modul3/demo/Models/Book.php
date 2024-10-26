@@ -1,5 +1,5 @@
 <?php
-namespace demo\models;
+namespace Models;
 
 abstract class Book {
     var $title;
