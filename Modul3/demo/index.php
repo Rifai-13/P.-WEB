@@ -15,6 +15,12 @@ $controller = new BookController();
 $fictionBook = $controller->createFictionBook("Harry Potter", "J.K. Rowling");
 echo $fictionBook->getDescription() . " - Genre: " . $fictionBook->getGenre() . "\n";
 
+$fictionBook = $controller->createFictionBook("Laskar pelangi", "Andrea Hirata");
+echo $fictionBook->getDescription() . " - Genre: " . $fictionBook->getGenre() . "\n";
+
 // Buat dan tampilkan detail buku non-fiksi
-$nonFictionBook = $controller->createNonFictionBook("Sapiens", "Yuval Noah Harari");
+$nonFictionBook = $controller->createNonFictionBook("Atomic Habits", "James Clear");
+echo $nonFictionBook->getDescription() . " - Genre: " . $nonFictionBook->getGenre() . "\n";
+
+$nonFictionBook = $controller->createNonFictionBook("The Power of Habit", "Charles Duhigg");
 echo $nonFictionBook->getDescription() . " - Genre: " . $nonFictionBook->getGenre() . "\n";
