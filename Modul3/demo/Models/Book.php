@@ -2,8 +2,8 @@
 namespace Models;
 
 abstract class Book {
-    var $title;
-    var $author;
+    protected $title;
+    protected $author;
 
     public function __construct($title, $author) {
         $this->title = $title;

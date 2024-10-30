@@ -2,8 +2,8 @@
 namespace Traits;
 
 trait Describable {
-    var $title;
-    var $author;
+    protected $title;
+    protected $author;
 
     public function getDescription() {
         return "Judul: {$this->title}, Penulis: {$this->author}";
