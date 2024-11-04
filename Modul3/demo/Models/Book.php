@@ -10,5 +10,5 @@ abstract class Book {
         $this->author = $author;
     }
 
-    abstract public function getGenre();
+    abstract public function getGenre(); 
 }

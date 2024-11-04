@@ -9,12 +9,14 @@ function cetakBilangan($n) {
             echo "Pemrograman\n";
         } elseif ($i % 6 == 0) {
             echo "Website\n";
-        } else {
+        }elseif ($i > 22 == 23 && $i <= 24) {
+            echo "Rifai\n";
+        }
+         else {
             echo "$i\n";
         }
     }
 }
 
-// Contoh pemanggilan fungsi
 cetakBilangan(25);
 ?>
