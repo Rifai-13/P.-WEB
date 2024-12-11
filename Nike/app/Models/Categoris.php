@@ -9,10 +9,10 @@ class Categoris extends Model
 {
     use HasFactory;
 
-    protected $table = 'Categoris';
+    // protected $table = 'Categoris';
     protected $fillable = ['jenis'];
 
     public function products(){
-        return $this->hasMany(products::class,'id');
+        return $this->hasMany(products::class,'categori_id');
     }
 }

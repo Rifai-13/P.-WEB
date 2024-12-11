@@ -26,8 +26,6 @@ class CategorisController extends Controller
             
         ]);
 
-     
-
         $categori = Categoris::create($validate);
 
         return response()->json($categori, 201);

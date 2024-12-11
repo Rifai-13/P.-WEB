@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Products extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'products';
     protected $fillable = [
         'name',
@@ -18,8 +18,7 @@ class Products extends Model
     ];
 
     public function categori()
-{
-    return $this->belongsTo(Categoris::class, 'categori_id');
-}
-
+    {
+        return $this->belongsTo(Categoris::class, 'categori_id');
+    }
 }

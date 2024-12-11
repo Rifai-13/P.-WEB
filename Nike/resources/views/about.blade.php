@@ -34,7 +34,7 @@
             <div class="text">
                 <h1>About Me</h1>
                 <p> 
-                    StyleSport adalah toko sepatu yang menghadirkan koleksi berkualitas untuk segala kebutuhan, mulai dari kasual hingga formal. Kami mengutamakan kenyamanan, desain modern, dan harga terjangkau. Temukan sepatu terbaik untuk melangkah lebih percaya diri bersama kami!
+                    StyleSport is a shoe store that offers a high-quality collection for every need, from casual to formal. We prioritize comfort, modern design, and affordable prices. Find the best shoes to step forward with confidence with us!
                 </p>
             </div>
         </div>

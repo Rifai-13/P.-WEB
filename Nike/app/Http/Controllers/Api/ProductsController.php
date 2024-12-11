@@ -41,7 +41,7 @@ class ProductsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
         $product = Products::find($id);
 
@@ -56,19 +56,20 @@ class ProductsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request,  $id)
     {
-        $product = Products::find($id);
+
+        $product = Products::find($id);       
 
         if (!$product) {
             return response()->json(['error' => 'Product not found'], 404);
         }
 
         $validate = $request->validate([
-            'name' => 'string',
-            'price' => 'numeric',
-            'image' => 'image|mimes:jpg,jpeg,png,gif',
-            'categori_id' => 'exists:categoris,id',
+            'name' => 'sometimes|string',    // Validasi name jika ada
+            'price' => 'sometimes|numeric',  // Validasi price jika ada
+            'image' => 'sometimes|image|mimes:jpg,jpeg,png,gif',  // Validasi image jika ada
+            'categori_id' => 'sometimes|exists:categoris,id',  // Validasi kategori jika ada
         ]);
 
         if ($request->hasFile('image')) {
@@ -84,7 +85,7 @@ class ProductsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         $product = Products::find($id);
 

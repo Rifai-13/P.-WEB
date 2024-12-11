@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->decimal('price', 12, 2);
             $table->string('image');
-            $table->unsignedBigInteger('categori_id'); // Sesuaikan nama kolom jika perlu
+            $table->unsignedBigInteger('categori_id'); 
             $table->foreign('categori_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });

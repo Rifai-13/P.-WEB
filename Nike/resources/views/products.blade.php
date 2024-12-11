@@ -59,8 +59,8 @@
                 <div class="card">
                     <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
                     <p>{{ $product->name }}</p>
-                    <p id="jenis">{{ $product->categori->jenis }}</p>
-                    <div class="price">Rp {{ number_format($product->price, 0, ',', '.') }}</div>
+                    <div id="jenis">{{ $product->categori->jenis }}</div>
+                    <div id="price">Rp {{ number_format($product->price, 0, ',', '.') }}</div>
                 </div>
             @endforeach
 

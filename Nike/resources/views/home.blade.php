@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StyleSport</title>
-    <link rel="stylesheet" href="css/style.css?v=1">
+    <link rel="stylesheet" href="css/style.css?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
@@ -34,6 +34,7 @@
             <div class="new">
                 <h1>Nike</h1>
                 <h2>Upgrade your Style</h2>
+                <p>"Step up your style with Nike! Choose shoes that are not only comfortable but also support an active lifestyle and boost your confidence. Make every move more stylish, only with Nike!"</p>
                 <button>Shop Now</button>
             </div>
         </div>
