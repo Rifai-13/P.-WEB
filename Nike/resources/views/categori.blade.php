@@ -43,24 +43,23 @@
             </div>
         </div>
 
-        <main>
-            <!-- Menampilkan kategori dan produk -->
-            @foreach ($categori as $category)
-                <!-- Gunakan $categori yang sama dengan controller -->
-                <h2>{{ $category->jenis }}</h2> <!-- Menampilkan jenis kategori -->
-                <div class="cards">
-                    @foreach ($category->Products as $product)
-                        <!-- Mengakses produk dari relasi -->
-                        <div class="card">
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
-                            <p>{{ $product->name }}</p>
-                            <div id="jenis">{{ $category->jenis }}</div> <!-- Mengakses kategori produk -->
-                            <div id="price">Rp {{ number_format($product->price, 0, ',', '.') }}</div>
-                        </div>
-                    @endforeach
-                </div>
-            @endforeach
-            {{-- <h2>Women's Shoes</h2>
+        <!-- Menampilkan kategori dan produk -->
+        @foreach ($categori as $category)
+            <!-- Gunakan $categori yang sama dengan controller -->
+            <h2>{{ $category->jenis }}</h2> <!-- Menampilkan jenis kategori -->
+            <div class="cards">
+                @foreach ($category->Products as $product)
+                    <!-- Mengakses produk dari relasi -->
+                    <div class="card">
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}">
+                        <p>{{ $product->name }}</p>
+                        <div id="jenis">{{ $category->jenis }}</div> <!-- Mengakses kategori produk -->
+                        <div id="price">Rp {{ number_format($product->price, 0, ',', '.') }}</div>
+                    </div>
+                @endforeach
+            </div>
+        @endforeach
+        {{-- <h2>Women's Shoes</h2>
             <div class="cards">
                 <div class="card">
                     <img src="image/nikejam.png" alt="nikeJam">
@@ -88,8 +87,8 @@
                 </div>
             </div> --}}
 
-            <!-- Kategori Men's Shoes -->
-            {{-- <h2>Men's Shoes</h2>
+        <!-- Kategori Men's Shoes -->
+        {{-- <h2>Men's Shoes</h2>
             <div class="cards">
                 <div class="card">
                     <img src="image/airjordan.png" alt="airJordan">
@@ -117,51 +116,51 @@
                 </div>
 
             </div> --}}
-        </main>
+    </main>
 
 
-        <footer class="footer"">
-            <p>&copy; 2024 StyleSport</p>
-            <div class="footer-links">
-                <div class="row">
-                    <div class="footer-col">
-                        <h3 id="title">Resources</h3>
-                        <ul>
-                            <li><a href="">Find A Store</a></li>
-                            <li><a href="">Become A Member</a></li>
-                            <li><a href="">Education Discounts</a></li>
-                            <li><a href="">Send Us Feedback</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h3 id="title">Help</h3>
-                        <ul>
-                            <li><a href="">Get Help</a></li>
-                            <li><a href="">Order Status</a></li>
-                            <li><a href="">Payment Options</a></li>
-                            <li><a href="">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h3 id="title">Company</h3>
-                        <ul>
-                            <li><a href="">About Us</a></li>
-                            <li><a href="">News</a></li>
-                            <li><a href="">Investors</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h3 id="title">Follow Us</h3>
-                        <ul>
-                            <li><a href="https://web.whatsapp.com/">WhatsApp</a></li>
-                            <li><a href="https://www.instagram.com/muh_rifai13/">Instagram</a></li>
-                        </ul>
-                    </div>
+    <footer class="footer"">
+        <p>&copy; 2024 StyleSport</p>
+        <div class="footer-links">
+            <div class="row">
+                <div class="footer-col">
+                    <h3 id="title">Resources</h3>
+                    <ul>
+                        <li><a href="">Find A Store</a></li>
+                        <li><a href="">Become A Member</a></li>
+                        <li><a href="">Education Discounts</a></li>
+                        <li><a href="">Send Us Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 id="title">Help</h3>
+                    <ul>
+                        <li><a href="">Get Help</a></li>
+                        <li><a href="">Order Status</a></li>
+                        <li><a href="">Payment Options</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 id="title">Company</h3>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">Investors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 id="title">Follow Us</h3>
+                    <ul>
+                        <li><a href="https://web.whatsapp.com/">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/muh_rifai13/">Instagram</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

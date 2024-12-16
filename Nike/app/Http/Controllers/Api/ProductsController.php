@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -13,8 +14,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return response()->json(products::all());
+        $products = Products::all()->map(function ($product) {
+            $product->image = asset('storage/' . $product->image); // Menambahkan URL lengkap
+            return $product;
+        });
+
+        return response()->json($products);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -29,7 +36,11 @@ class ProductsController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $validate['image'] = $request->file('image')->store('image', 'public');
+            try {
+                $validate['image'] = $request->file('image')->store('image', 'public');
+            } catch (\Exception $e) {
+                return response()->json(['error' => 'Image upload failed'], 500);
+            }
         }
 
 
@@ -49,6 +60,8 @@ class ProductsController extends Controller
             return response()->json(['error' => 'Product not found'], 404);
         }
 
+        $product->image = asset('storage/' . $product->image);
+
         return response()->json($product);
     }
 
@@ -59,7 +72,7 @@ class ProductsController extends Controller
     public function update(Request $request,  $id)
     {
 
-        $product = Products::find($id);       
+        $product = Products::find($id);
 
         if (!$product) {
             return response()->json(['error' => 'Product not found'], 404);
@@ -73,7 +86,19 @@ class ProductsController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $validate['image'] = $request->file('image')->store('image', 'public');
+            try {
+                // Simpan gambar baru
+                $newImage = $request->file('image')->store('image', 'public');
+
+                // Hapus file lama jika ada
+                if ($product->image && Storage::exists('public/' . $product->image)) {
+                    Storage::delete('public/' . $product->image);
+                }
+
+                $validate['image'] = $newImage;
+            } catch (\Exception $e) {
+                return response()->json(['error' => 'Image upload failed'], 500);
+            }
         }
 
         $product->update($validate);

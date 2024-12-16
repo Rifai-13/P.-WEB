@@ -10,8 +10,11 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "axios": "^1.3.4",
+    "bootstrap": "^5.3.3",
     "codelab": "file:../codelab",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",
