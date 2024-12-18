@@ -13,6 +13,7 @@
             comfortable but also support an active lifestyle and boost your
             confidence. Make every move more stylish, only with Nike!"
           </p>
+          <br>
           <button>Shop Now</button>
         </div>
       </div>
