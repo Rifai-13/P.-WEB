@@ -22,6 +22,21 @@ const routes = [
         name: 'About',
         component: () => import('../views/About.vue')       
     },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: () => import('../views/Admin.vue')       
+    },
+    {
+        path: '/productcrud',
+        name: 'ProductCRUD',
+        component: () => import('../views/ProductCRUD.vue')       
+    },
+    {
+        path: '/categoricrud',
+        name: 'CategoriCRUD',
+        component: () => import('../views/CategoriCRUD.vue')       
+    },
 ]
 
 const router = createRouter({
