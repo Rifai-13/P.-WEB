@@ -1,14 +1,58 @@
 <!-- AdminDashboard.vue -->
 <script>
 import AppNavbar from "../components/AppNavbar.vue";
+import Api from "../api/index.js"; // Pastikan Anda memiliki konfigurasi API di file ini
+import Categori from "./Categori.vue";
 
 export default {
   name: "AdminDashboard",
   components: {
     AppNavbar,
   },
+  data() {
+    return {
+      products: [],
+      categoris: [],
+    };
+  },
+  methods: {
+    async fetchProducts() {
+      try {
+        const response = await Api.get("/api/products");
+        this.products = response.data;
+      } catch (error) {
+        console.error("Error fetching products:", error.message);
+      }
+    },
+
+    async fetchCategoris() {
+      try {
+        const response = await Api.get("/api/categoris");
+        this.categoris = response.data;
+      } catch (error) {
+        console.error("Error fetching products:", error.message);
+      }
+    },
+    
+  },
+
+
+  computed: {
+
+    productCount() {
+      return this.products.length;
+    },
+    categorisCount() {
+      return this.categoris.length;
+    }
+  },
+  mounted() {
+    this.fetchProducts();
+    this.fetchCategoris();
+  },
 };
 </script>
+
 
 <template>
   <div class="flex min-h-screen bg-gray-100">
@@ -79,7 +123,7 @@ export default {
           >
             <div>
               <h3 class="text-lg font-semibold text-gray-700">Products</h3>
-              <p class="text-2xl font-bold mt-2">120</p>
+              <p class="text-2xl font-bold mt-2">{{ productCount }}</p>
             </div>
             <i class="fas fa-boxes text-blue-500 text-4xl"></i>
           </div>
@@ -101,7 +145,7 @@ export default {
           >
             <div>
               <h3 class="text-lg font-semibold text-gray-700">Categoris</h3>
-              <p class="text-2xl font-bold mt-2">32</p>
+              <p class="text-2xl font-bold mt-2">{{ categorisCount }}</p>
             </div>
             <i class="fas fa-tags text-yellow-500 text-4xl"></i>
           </div>

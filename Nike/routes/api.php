@@ -6,7 +6,6 @@ use App\Http\Controllers\Api\ProductsController;
 use App\Http\Controllers\Api\CategorisController;
 
 
-
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
@@ -15,3 +14,4 @@ Route::get('/user', function (Request $request) {
 Route::apiResource('/products', ProductsController::class);
 
 Route::apiResource('/categoris', CategorisController::class);
+

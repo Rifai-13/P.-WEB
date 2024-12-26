@@ -37,6 +37,11 @@ const routes = [
         name: 'CategoriCRUD',
         component: () => import('../views/CategoriCRUD.vue')       
     },
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import('../views/Login.vue')       
+    },
 ]
 
 const router = createRouter({
